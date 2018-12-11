@@ -1,0 +1,112 @@
+body {
+    background-color: #e6e6e9;
+    border: 0;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+h1, h2 {
+    color: #003083;
+    font-size: 1.5rem;
+}
+
+header > a > img {
+  max-height: 1.25rem;
+  margin-left: 1rem;
+}
+
+ul {
+  position: center;
+}
+
+li {
+  list-style-type: square #00008B;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+a {
+    color: #003083;
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-decoration: none;
+}
+
+a[href="register.html"]{
+  display: inline;
+  text-decoration: underline;
+}
+
+button {
+    background-color: #307cc0;
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 1em;
+    padding: 1em;
+    text-align: center;
+    border: none;
+    border-bottom: solid 2px #003083;
+    width: 10rem;
+}
+
+button[formaction="index.html"] {
+  background-color: rgba(153, 134, 117, 0.3);
+  color: #003083;
+  border: none;
+  border-bottom: solid 2px #003083;
+}
+
+section {
+    background-color: #fff;
+    margin: 1rem;
+    padding: 1rem 2rem;;
+    margin-bottom: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+section > article:last-child{
+  margin-left: 1.5rem;
+}
+
+form {
+  margin: 0 1.5rem;
+}
+
+label {
+    color: #003083;
+    display: block;
+    padding-top: 1em;
+}
+
+input {
+  border-color: lightgrey;
+  display: block;
+  line-height: 2em;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  width: 100%;
+}
+
+input:focus, input:invalid {
+  background-color: #fff;
+}
+
+input:valid {
+  background-color: #98FB98;
+  border: solid 3px #3CB371;
+}
+
+@media (min-width: 48em) {
+  section {
+    grid-column: span 1;
+  }
+
+}
