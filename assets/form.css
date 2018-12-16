@@ -95,8 +95,8 @@ input {
   width: 100%;
 }
 
-input:focus, input:invalid {
-  background-color: #fff;
+input:focus:invalid {
+  background-color: tomato;
 }
 
 input:valid {

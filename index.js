@@ -8,7 +8,6 @@ more.addEventListener('click', showOptions)
 
 function showOptions(e) {
     e.preventDefault()
-    console.log("doei")
     moreOptions.className = "less"
     lessOptions.className = "more"
 
@@ -22,7 +21,6 @@ lessOptions.addEventListener('click', hideOptions)
 
 function hideOptions(e) {
   e.preventDefault()
-  console.log("dag")
   moreOptions.className = "more"
   lessOptions.className = "less"
 

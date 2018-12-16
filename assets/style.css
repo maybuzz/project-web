@@ -151,6 +151,42 @@ section > h3 {
     margin: 0 0 1em 0;
 }
 
+.verhalenweb {
+    display: block;
+    margin: 0;
+}
+
+.verhalen {
+    grid-column: span 1;
+}
+
+.uno {
+  background-image: url(images/zen1.png);
+  background-size: contain;
+  background-position: absolute;
+  }
+
+.duo {
+  background-image: url(images/mysterieus4.jpg);
+  background-size: contain;
+  background-position: absolute;
+}
+
+.trio {
+  background-image: url(images/misleidend4.jpg);
+  background-size: contain;
+  background-position: absolute;
+}
+
+#random > article {
+  background-image: url(images/zen2.png);
+  background-size: contain;
+}
+
+main > h1 {
+  margin-bottom: 1em;
+}
+
 /*            VERHALENPLANNER         */
 
 .more {
@@ -222,8 +258,68 @@ div {
     display: block;
 }
 
-/*        IPAD        */
+form {
+    grid-column: span 2;
+    grid-template-columns: repeat(3, fr);
+}
 
+.verhalenweb {
+    background-image: url(images/perron4.jpg);
+    display: block;
+}
+
+.verhalenweb > h3 {
+    color: #fff;
+}
+
+.verhalenweb > a[href="result.html"] {
+    float: bottom;
+}
+
+.verhalen {
+    display: none;
+}
+
+/*                ARTICLES             */
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+article {
+    background-color: #fff;
+    font-size: 1rem;
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.verhalen {
+    background-image: url(images/perron4kopie.jpg);
+    background-position: center;
+    color: #fff;
+}
+
+.verhalen > h3 {
+    color: #fff;
+}
+
+.verhalenweb {
+    display: none;
+}
+
+article > a {
+    background-color: #307cc0;
+    color: #fff;
+    display: inline-block;
+    padding: inherit;
+    text-decoration: none;
+}
+
+
+/*        IPAD        */
 @media screen and (min-width: 48em) {
 
     main {
@@ -284,154 +380,7 @@ div {
         padding: 1em;
         font-size: 1em;
     }
-}
 
-
-/*        WEB + IPAD LANDSCAPE        */
-
-@media screen and (min-width: 60em) {
-
-    main {
-        margin-left: 3em;
-        margin-right: 3em;
-    }
-
-    nav > ul {
-        padding: 0 3em;
-    }
-
-    a[href="result.html"] {
-        background-color: #307cc0;
-        color: #fff;
-        display: inline-block;
-        margin: 1em;
-        padding: 1em;
-        text-decoration: none;
-    }
-
-    form {
-        grid-column: span 3;
-    }
-
-    legend {
-        color: #003083;
-        font: sans-serif;
-        font-size: 2em;
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-
-    label {
-        color: #003083;
-        display: inline-block;
-        margin-left: 1em;
-    }
-
-    input[type="text"] {
-        width: 16.6rem;
-    }
-}
-
-
-/*        WEB:     */
-
-
-@media screen and (min-width: 75em) {
-
-    form {
-        grid-column: span 2;
-        grid-template-columns: repeat(3, fr);
-    }
-
-    .verhalenweb {
-        background-image: url(images/perron4.jpg);
-        display: block;
-    }
-
-    .verhalenweb > h3 {
-        color: #fff;
-    }
-
-    .verhalenweb > a[href="result.html"] {
-        float: bottom;
-    }
-
-    .verhalen {
-        display: none;
-    }
-}
-
-
-
-/*                ARTICLES             */
-
-section {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-article {
-    background-color: #fff;
-    font-size: 1rem;
-    grid-column: span 1;
-    grid-template-columns: 1fr;
-    margin-bottom: 1em;
-    padding: 1em;
-}
-
-.verhalen {
-    background-image: url(images/perron4kopie.jpg);
-    background-position: center;
-    color: #fff;
-}
-
-.verhalen > h3 {
-    color: #fff;
-}
-
-.verhalenweb {
-    display: none;
-}
-
-article > a {
-    background-color: #307cc0;
-    color: #fff;
-    display: inline-block;
-    padding: inherit;
-    text-decoration: none;
-}
-
-
-/*        ipad:         */
-
-@media screen and (min-width: 48em) {
-    section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1em;
-    }
-    section > h2 {
-        grid-column: span 2;
-    }
-    .nietIngelogd, .ingelogd {
-        /* display: inline-block; */
-        grid-column: span 1;
-    }
-    article {
-        display: block;
-        grid-column: span 1;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .top3 > article:last-of-type {
-        grid-column: span 2;
-    }
-}
-
-
-/*        desktop:     */
-
-@media (min-width: 60em) {
     section {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -491,10 +440,235 @@ article > a {
         display: block;
         grid-column: span 1;
     }
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }
+    section > h2 {
+        grid-column: span 2;
+    }
+    .nietIngelogd, .ingelogd {
+        /* display: inline-block; */
+        grid-column: span 1;
+    }
+    article {
+        display: block;
+        grid-column: span 1;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top3 > article:last-of-type {
+        grid-column: span 2;
+    }
+}
+
+
+/*        WEB + IPAD LANDSCAPE        */
+
+@media screen and (min-width: 60em) {
+
+    main {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    nav > ul {
+        padding: 0 3em;
+    }
+
+    a[href="result.html"] {
+        background-color: #307cc0;
+        color: #fff;
+        display: inline-block;
+        margin: 1em;
+        padding: 1em;
+        text-decoration: none;
+    }
+
+    form {
+        grid-column: span 3;
+    }
+
+    legend {
+        color: #003083;
+        font: sans-serif;
+        font-size: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    label {
+        color: #003083;
+        display: inline-block;
+        margin-left: 1em;
+    }
+
+    input[type="text"] {
+        width: 16.6rem;
+    }
+}
+
+
+/*        WEB:     */
+@media screen and (min-width: 75em) {
+
+    /* form {
+        grid-column: span 2;
+        grid-template-columns: repeat(3, fr);
+    }
+
+    .verhalenweb {
+        background-image: url(images/perron4.jpg);
+        display: block;
+    }
+
+    .verhalenweb > h3 {
+        color: #fff;
+    }
+
+    .verhalenweb > a[href="result.html"] {
+        float: bottom;
+    }
+
+    .verhalen {
+        display: none;
+    } */
+}
+
+/*                ARTICLES             */
+
+/* section {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+article {
+    background-color: #fff;
+    font-size: 1rem;
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.verhalen {
+    background-image: url(images/perron4kopie.jpg);
+    background-position: center;
+    color: #fff;
+}
+
+.verhalen > h3 {
+    color: #fff;
+}
+
+.verhalenweb {
+    display: none;
+}
+
+article > a {
+    background-color: #307cc0;
+    color: #fff;
+    display: inline-block;
+    padding: inherit;
+    text-decoration: none;
+} */
+
+
+/*        ipad:         */
+
+@media screen and (min-width: 48em) {
+    /* section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }
+    section > h2 {
+        grid-column: span 2;
+    }
+    .nietIngelogd, .ingelogd { */
+        /* display: inline-block; */
+        /* grid-column: span 1;
+    }
+    article {
+        display: block;
+        grid-column: span 1;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top3 > article:last-of-type {
+        grid-column: span 2;
+    } */
+}
+
+
+/*        desktop:     */
+
+@media (min-width: 60em) {
+    /* section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    section > p,
+    section > h2 {
+        grid-column: span 3;
+    }
+
+    header,
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: span 3;
+    }
+
+    article {
+        grid-column: span 1;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    article > a {
+        background-color: #307cc0;
+        color: #fff;
+        display: inline-block;
+        padding: inherit;
+        text-decoration: none;
+    }
+
+    .top3 > article:last-of-type {
+        grid-column: span 1;
+    }
+
+    section#result > article {
+        grid-column-start: 1;
+        margin-bottom: 1rem;
+    }
+
+    .verhalen {
+        grid-column: span 2;
+    }
+
+    section#random > article {
+        padding-bottom: 2.1rem;
+        margin-top: 3.4rem;
+    }
+
+    main > div {
+        float: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+        grid-gap: 1rem;
+    }
+
+    main > div section {
+        display: block;
+        grid-column: span 1;
+    } */
 }
 
 @media (min-width: 75em) {
-    .verhalenweb {
+    /* .verhalenweb {
         display: block;
         margin: 0;
     }
@@ -529,4 +703,5 @@ article > a {
 
 main > h1 {
     margin-bottom: 1em;
+} */
 }

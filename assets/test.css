@@ -1,0 +1,333 @@
+body {
+    background-color: #e6e6e9;
+    border: 0;
+    font-family: 'NSsans', sans-serif;
+    font: 16px;
+    color: #003082;
+    margin: 0;
+    padding: 0;
+    text-align: -webkit-center;
+    width: 100%;
+}
+
+.backgr {
+    background-image: url(images/girlov44.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+  padding: 1rem;
+  text-align: left;
+}
+
+@font-face {
+    font-family: 'NSsans', 'NSsansbold' ;
+    src: url('fonts/nssans.ttf'), url('fonts/nssansbol.ttf');
+}
+
+h1 {
+    font-size: 1em;
+    color: #003082;
+    margin: 0;
+    display: inline-block;
+}
+
+h4 {
+  margin: 0;
+  display: inline-block;
+}
+
+h4 > a {
+  padding: 0;
+  margin-top: 1em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+/* HEADER */
+
+header {
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    border-bottom: solid 2px #ccc;
+}
+
+.header {
+    height: 20px;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+li {
+    display: inline;
+    text-decoration: none;
+}
+
+li:first-of-type {
+    margin-right: auto;
+}
+
+li:last-of-type {
+    margin-left: auto;
+}
+
+li > a, h1 > a {
+  background-color: #fff;
+  border: none;
+  color: #000;
+}
+
+.nietIngelogd {
+  background-color: rgba(0,48,131, 0.8);
+  grid-column: span 1;
+  grid-template-columns: 1fr;
+  display: block;
+  padding: 1em;
+  margin-bottom: 5em;
+}
+
+.nietIngelogd > h3 {
+  color: #fff;
+}
+
+.nietIngelogd > ul {
+  display: grid;
+}
+
+li > a[href="login.html"], li > a[href="register.html"] {
+  background-color: rgba(153, 134, 117, 0.3);
+  color: #fff;
+  display: inline-block;
+  border: none;
+  border-bottom: solid 2px #003083;
+}
+
+/* VERHALENPLANNER */
+
+form {
+  background-color: rgb(255, 202, 0, 0.8);
+  grid-column: span 2;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+fieldset {
+  border: none;
+  padding-bottom: 1rem;
+  display: block;
+}
+
+fieldset {
+  grid-column: span 2;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+legend {
+  color: #003083;
+  font-size: 2em;
+  padding: 0.8em 0;
+}
+
+input[type="text"] {
+  border-color: lightgrey;
+  display: inline;
+  max-width: 47%;
+  width: 45%;
+  min-width: 40%;
+  line-height: 2em;
+  padding: 1em;
+}
+
+input[type="text"]:last-of-type {
+  float: right;
+}
+
+input[type="checkbox"]{
+  padding-top: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: solid 2px #003083;
+  background-color: #0179D3;
+  padding: 0.5em;
+  float: right;
+  margin-top: 0.5em;
+}
+
+a[href="result.html#result"], a[href="result.html#random"]{
+  margin-left: 1rem;
+}
+
+.more {
+  background-color: rgba(153, 134, 117, 0.3);
+  color: #003083;
+  display: inline-block;
+  border: none;
+  border-bottom: solid 2px #003083;
+  float: left;
+}
+
+.less {
+  background-color: rgba(153, 134, 117, 0.3);
+  color: #003083;
+  display: none;
+  float: left;
+}
+
+.seeMeNot {
+  display: none;
+}
+
+.seeMe{
+  display: block;
+}
+
+#options {
+  padding-top: 0em;
+}
+
+/* ARTIKELEN  */
+
+section {
+    display: grid;
+    grid-column: span 2;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0.8em;
+    grid-row-gap: 0.8em;
+}
+
+section > h2 {
+  grid-column: span 3;
+}
+
+.verhalenweb {
+    display: block;
+    margin: 0;
+    background-image: url(images/perron4.jpg);
+}
+
+.verhalenweb > h3 {
+    color: #fff;
+}
+
+.verhalen {
+  display: none;
+}
+
+article {
+    background-color: #fff;
+    font-size: 1rem;
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+    padding: 1em;
+}
+
+article > a {
+  float: bottom;
+}
+
+a[href="verward.html"]:first-child, a[href="paranoia.html"]:first-child, a[href="song.html"]:first-child {
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+
+/* RESULT */
+
+div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1em;
+  grid-gap: 0.8em;
+}
+
+#result {
+  grid-column: span 1;
+  display: block;
+}
+
+#result > article {
+  margin-bottom: 1em;
+  display: inline-block;
+  padding: 0 1em;
+}
+
+#result > a {
+  background: none;
+  color: #000;
+  border: none;
+  float: left;
+  display: block;
+}
+
+#random {
+  grid-column: span 1;
+  display: block;
+}
+
+#random > article {
+  padding-top: 0;
+  height: ;
+}
+
+.top3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.top3 > h2 {
+  grid-column: span 3;
+}
+
+/* IPAD  */
+
+@media screen and (max-width: 53em) {
+
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nietIngelogd {
+    margin-bottom: 1em;
+  }
+
+  /* VERHALENPLANNER  */
+  input[type="text"] {
+    background-color: #fff;
+  }
+
+  a[href="result.html#result"], a[href="result.html#random"]{
+    display: block;
+  }
+
+  /* ARTIKELEN  */
+  .verhalenweb {
+    display: none;
+  }
+
+  .verhalen {
+    display: block;
+    margin: 0;
+    background-image: url(images/perron4.jpg);
+  }
+
+  .verhalen > h3 {
+      color: #fff;
+  }
+
+  section > h2 {
+    grid-column: span 2;
+  }
+}
