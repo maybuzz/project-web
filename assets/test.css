@@ -2,11 +2,9 @@ body {
     background-color: #e6e6e9;
     border: 0;
     font-family: 'NSsans', sans-serif;
-    font: 16px;
     color: #003082;
     margin: 0;
     padding: 0;
-    text-align: -webkit-center;
     width: 100%;
 }
 
@@ -33,14 +31,20 @@ h1 {
     display: inline-block;
 }
 
-h4 {
+h2, h3, h4  {
   margin: 0;
   display: inline-block;
+  color: #003082;
 }
 
-h4 > a {
+h3 {
+  font-size: 1em;
+}
+
+h4 > a, h3 > a {
   padding: 0;
-  margin-top: 1em;
+  /* margin-top: 1em; */
+  color: #003082;
 }
 
 p {
@@ -54,7 +58,7 @@ header {
     text-align: center;
     width: 100%;
     position: sticky;
-    border-bottom: solid 2px #ccc;
+    border-bottom: solid 2px #C5C5CB;
 }
 
 .header {
@@ -82,9 +86,9 @@ li:last-of-type {
 }
 
 li > a, h1 > a {
-  background-color: #fff;
+  background: none;
   border: none;
-  color: #000;
+  color: #003082;
 }
 
 .nietIngelogd {
@@ -112,14 +116,42 @@ li > a[href="login.html"], li > a[href="register.html"] {
   border-bottom: solid 2px #003083;
 }
 
+/* FOOTER */
+
+footer {
+  background: #fff;
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+footer > section:first-of-type {
+  grid-column: span 1;
+  display: block;
+}
+
+footer > section:last-of-type {
+  grid-column: span 1;
+  display: block;
+}
+
+.footer {
+  background: none !important;
+  border: none !important;
+  color: #000 !important;
+  float:
+}
+
 /* VERHALENPLANNER */
 
 form {
-  background-color: rgb(255, 202, 0, 0.8);
+  background-color: rgba(255, 202, 0.95);
   grid-column: span 2;
   padding-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-bottom: solid 2px #C5C5CB;
 }
 
 fieldset {
@@ -176,7 +208,7 @@ a[href="result.html#result"], a[href="result.html#random"]{
   color: #003083;
   display: inline-block;
   border: none;
-  border-bottom: solid 2px #003083;
+  border-bottom: solid 2px #CFA317;
   float: left;
 }
 
@@ -184,6 +216,7 @@ a[href="result.html#result"], a[href="result.html#random"]{
   background-color: rgba(153, 134, 117, 0.3);
   color: #003083;
   display: none;
+  border-bottom: solid 2px #CFA317;
   float: left;
 }
 
@@ -229,20 +262,18 @@ section > h2 {
 
 article {
     background-color: #fff;
-    font-size: 1rem;
-    grid-column: span 1;
-    grid-template-columns: 1fr;
     padding: 1em;
+    border-bottom: solid 2px #C5C5CB;
 }
 
-article > a {
-  float: bottom;
+section[class="top3"] > article {
+  height: 100%;
 }
 
 a[href="verward.html"]:first-child, a[href="paranoia.html"]:first-child, a[href="song.html"]:first-child {
   border: none;
-  background-color: #fff;
-  color: #000;
+  background: none;
+  color: #003082;
 }
 
 /* RESULT */
