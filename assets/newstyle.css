@@ -9,15 +9,14 @@ body {
 }
 
 .backgr {
-    background-image: url(images/girlov4444444.jpg);
+    background-image: url(images/girlov44.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 main {
-  padding: 1rem;
+  padding: 1em 2em;
   text-align: left;
-  margin: 0 1em;
 }
 
 @font-face {
@@ -26,15 +25,19 @@ main {
 }
 
 h1 {
-    font-size: 1em;
+    font-size: 2em;
     color: #003082;
     margin: 0;
     display: inline-block;
 }
 
-h3, h4  {
+main > h1 {
+  margin-bottom: 1em;
+}
+
+h2, h3, h4  {
   margin: 0;
-  display: inline-block;
+  display: block;
   color: #003082;
 }
 
@@ -44,12 +47,12 @@ h3 {
 
 h4 > a, h3 > a {
   padding: 0;
-  margin-top: 1em;
   color: #003082;
 }
 
 p {
   margin: 1em 0;
+  display: inline-block;
 }
 
 /* HEADER */
@@ -69,8 +72,12 @@ header {
 ul {
     display: flex;
     margin: 0;
-    padding: 0;
+    padding: 0em;
     justify-content: space-between;
+}
+
+nav > ul {
+  padding: 0 1.5em;
 }
 
 li {
@@ -86,21 +93,28 @@ li:last-of-type {
     margin-left: auto;
 }
 
-li > a, h1 > a {
+li > a, h1 > a, li > h1 {
   background: none;
   border: none;
   color: #003082;
-  margin-top: 0.5em;
+  font-size: 1em;
+}
+
+li > a:focus, li > h1:hover, li > h1:focus {
+  transform: scale(1.2);
+}
+
+li > a:hover > img {
+  transform: rotate(45deg);
 }
 
 .nietIngelogd {
-  background-color: rgba(0,48,131, 0.8);
+  background-color: rgba(0, 48, 131, 0.9);
   grid-column: span 1;
   grid-template-columns: 1fr;
   display: block;
-  padding: 1.5em;
-  margin-top: 1.5em;
-  margin-bottom: 10em;
+  padding: 1em;
+  margin-bottom: 8em;
   width: fit-content;
 }
 
@@ -120,47 +134,16 @@ li > a[href="login.html"], li > a[href="register.html"] {
   border-bottom: solid 2px #003083;
 }
 
-/* FOOTER */
-
-footer {
-  background: #fff;
-  position: relative;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 4em;
-}
-
-footer > section:first-of-type {
-  grid-column: span 1;
-  display: block;
-}
-
-footer > section:last-of-type {
-  grid-column: span 1;
-  display: block;
-}
-
-.footer {
-  background: none !important;
-  border: none !important;
-  color: #000 !important;
-  float:
-}
-
 /* VERHALENPLANNER */
 
 form {
-  background-color: rgba(255, 202, 0, 0.9);
+  background-color: rgba(255, 202, 0, 0.95);
   grid-column: span 2;
-  padding-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-bottom: solid 2px #C5C5CB;
-}
-
-.result {
-
+  margin-bottom: 1em;
+  padding-top: 1em;
 }
 
 fieldset {
@@ -188,11 +171,7 @@ input[type="text"] {
   min-width: 40%;
   line-height: 2em;
   padding: 1em;
-}
-
-.result {
-  max-width: 50% !important;
-  width: 46% !important;
+  cursor: vertical-text;
 }
 
 input[type="text"]:last-of-type {
@@ -208,13 +187,29 @@ a {
   color: #fff;
   border-bottom: solid 2px #003083;
   background-color: #0179D3;
+  transition: background-color 0.5s ease;
   padding: 0.5em;
   float: right;
-  margin-top: 1.5em;
+  margin-top: 0.5em;
+}
+
+a:focus {
+  transform: scale(1.2);
 }
 
 a[href="result.html#result"], a[href="result.html#random"]{
   margin-left: 1rem;
+}
+
+a[href="result.html#result"]:focus, a[href="result.html#result"]:hover, a[href="result.html#random"]:focus,
+a[href="result.html#random"]:hover,
+a[href="login.html"]:focus,
+a[href="login.html"]:hover,
+a[href="register.html"]:focus,
+a[href="register.html"]:hover  {
+  margin-left: 1em;
+  transition: box-shadow .45s ease-in-out;
+  box-shadow: inset 0 -2.15em 0 rgba(0, 48, 131, 0.9);
 }
 
 .more {
@@ -224,12 +219,19 @@ a[href="result.html#result"], a[href="result.html#random"]{
   border: none;
   border-bottom: solid 2px #CFA317;
   float: left;
+  cursor: context-menu;
+}
+
+.more:hover, .more:focus {
+  transition: box-shadow .45s ease-in-out;
+  box-shadow: inset 0 -2.15em 0 #CFA317;
 }
 
 .less {
   background-color: rgba(153, 134, 117, 0.3);
   color: #003083;
   display: none;
+  border-bottom: solid 2px #CFA317;
   float: left;
 }
 
@@ -242,7 +244,7 @@ a[href="result.html#result"], a[href="result.html#random"]{
 }
 
 #options {
-  padding-top: 0em;
+  margin: 1em 0;
 }
 
 /* ARTIKELEN  */
@@ -262,7 +264,8 @@ section > h2 {
 .verhalenweb {
     display: block;
     margin: 0;
-    background-image: url(images/perron4.jpg);
+    background-image: url(images/perron4kopie.jpg);
+    margin-bottom: 1em;
 }
 
 .verhalenweb > h3 {
@@ -279,8 +282,12 @@ article {
     border-bottom: solid 2px #C5C5CB;
 }
 
-section[class="top3"] > article {
-  /* height: 100%; */
+article > a {
+  float: left;
+}
+
+a[href="verward.html"]:first-child:hover, a[href="paranoia.html"]:first-child:hover, a[href="song.html"]:first-child:hover {
+  transform: rotate(180deg) !important;
 }
 
 a[href="verward.html"]:first-child, a[href="paranoia.html"]:first-child, a[href="song.html"]:first-child {
@@ -309,12 +316,8 @@ div {
   padding: 0 1em;
 }
 
-#result > a {
-  background: none;
-  color: #000;
-  border: none;
-  float: left;
-  display: block;
+#result > h2, #random > h2 {
+  margin-bottom: 0.5em;
 }
 
 #random {
@@ -334,91 +337,65 @@ div {
   grid-column: span 3;
 }
 
-/* IPAD  */
-
-@media screen and (max-width: 58em) {
-
-  .backgr {
-    background-image: url(images/girlov444.jpg);
-  }
-
-  section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .nietIngelogd {
-    margin-bottom: 8em;
-  }
-
-  /* VERHALENPLANNER  */
-  input[type="text"] {
-    background-color: #fff;
-  }
-
-  a[href="result.html#result"], a[href="result.html#random"]{
-    display: block;
-  }
-
-  .result {
-    width: 45% !important;
-  }
-
-  /* ARTIKELEN  */
-  .verhalenweb {
-    display: none;
-  }
-
-  .verhalen {
-    display: block;
-    margin: 0;
-    background-image: url(images/perron4.jpg);
-  }
-
-  .verhalen > h3 {
-      color: #fff;
-  }
-
-  section > h2 {
-    grid-column: span 2;
-  }
-
-  .top3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .top3 > h2 {
-    grid-column: span 2;
-  }
+article > h4 {
+  float: left;
+  display: block;
+  margin-top: 0.5em;
 }
 
-/* MOBILE */
+/* LOSSE VERHALEN */
 
-@media screen and (max-width: 39em) {
-  .backgr {
-    background-image: url(images/girlov444.jpg);
-  }
+label > input[type="text"] {
+  float: left !important;
+  margin-top: 1em;
+  height: 1em;
+}
+
+label > a {
+  float: left !important;
+  height: 0.8em;
+  padding-bottom: 1em;
+  margin-top: 0.7em;
+}
+
+label > a:hover {
+  transition: box-shadow .45s ease-in-out;
+  box-shadow: inset 0 -2.3em 0 rgba(0, 48, 131, 0.9);
+}
+
+article > h3:last-of-type {
+  margin-top: 1em;
+}
+
+/* IPAD  */
+
+@media screen and (max-width: 56em) {
 
   section {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .nietIngelogd {
-    margin-bottom: 8em;
+    margin-bottom: 1em;
   }
 
   /* VERHALENPLANNER  */
+
+  form {
+    margin-bottom: 1em;
+  }
+
   input[type="text"] {
     background-color: #fff;
-    display: block;
-    position: absolute;
+    cursor: vertical-text;
   }
 
   a[href="result.html#result"], a[href="result.html#random"]{
     display: block;
   }
 
-  .result {
-    width: 45% !important;
+  .nietIngelogd {
+    margin-bottom: 3em;
   }
 
   /* ARTIKELEN  */
@@ -429,7 +406,7 @@ div {
   .verhalen {
     display: block;
     margin: 0;
-    background-image: url(images/perron4.jpg);
+    background-image: url(images/perron4kopie.jpg);
   }
 
   .verhalen > h3 {
@@ -437,14 +414,62 @@ div {
   }
 
   section > h2 {
-    grid-column: span 2;
+    grid-column: span 2 !important;
   }
 
-  .top3 {
+}
+
+@media screen and (max-width: 39em) {
+
+  main {
+    padding: 1em;
+  }
+
+  nav > ul {
+    padding: 0 1em;
+  }
+
+  section {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  section > h2 {
+    grid-column: span 1 !important;
+  }
+
+  .nietIngelogd {
+    margin-bottom: 3em;
+  }
+
+  /* VERHALENPLANNER  */
+
+  form {
+    display: block;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column: span 1;
+  }
+
+  input[type="text"] {
+    background-color: #fff;
+    width: -webkit-fill-available;
+    max-width: 100%;
+  }
+
+  fieldset > input:last-of-type {
+    margin: 1em 0 1em 0;
+  }
+
+  a[href="result.html#result"], a[href="result.html#random"]{
+    display: block;
+  }
+
+  /* ARTIKELEN  */
+  div {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .top3 > h2 {
-    grid-column: span 1;
+  #random {
+    margin-bottom: 1.5em;
   }
+
 }

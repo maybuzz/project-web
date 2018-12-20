@@ -18,6 +18,10 @@ header > a > img {
   margin-left: 1rem;
 }
 
+header > a:hover > img {
+  transform: rotate(45deg) !important;
+}
+
 ul {
   position: center;
 }
@@ -36,14 +40,24 @@ a {
     text-decoration: none;
 }
 
-a[href="register.html"]{
+a[href="register.html"] {
   display: inline;
   text-decoration: underline;
+  cursor: copy;
+}
+
+a[href="login.html"] {
+  cursor: alias;
+}
+
+a[href="login.html"]:hover, a[href="register.html"]:hover {
+  transform: scale(1.2);
 }
 
 button {
     background-color: #307cc0;
     color: #fff;
+    cursor: pointer;
     display: inline-block;
     font-size: 1em;
     margin-top: 1em;
@@ -54,11 +68,9 @@ button {
     width: 10rem;
 }
 
-button[formaction="index.html"] {
-  background-color: rgba(153, 134, 117, 0.3);
-  color: #003083;
-  border: none;
-  border-bottom: solid 2px #003083;
+button[type="submit"]:hover {
+  transition: box-shadow .45s ease-in-out;
+  box-shadow: inset 0 -3.1em 0 rgba(0, 48, 131, 0.9);
 }
 
 section {
@@ -93,6 +105,7 @@ input {
   margin-bottom: 0.5em;
   margin-top: 1em;
   width: 100%;
+  cursor: vertical-text;
 }
 
 input:focus:invalid {

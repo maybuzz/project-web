@@ -33,7 +33,7 @@ h1 {
 
 h2, h3, h4  {
   margin: 0;
-  display: inline-block;
+  display: block;
   color: #003082;
 }
 
@@ -98,6 +98,7 @@ li > a, h1 > a {
   display: block;
   padding: 1em;
   margin-bottom: 5em;
+  width: fit-content;
 }
 
 .nietIngelogd > h3 {
@@ -322,12 +323,53 @@ div {
   grid-column: span 3;
 }
 
+.next {
+  width: 50%;
+  animation-duration: 5s;
+  animation-name: fadeInLeftBig;
+  display: block;
+  transition-property: display;
+  transition-duration: 5s;
+  transition-delay: 2s;
+}
+
+@keyframes fadeInLeftBig {
+  from {
+    margin-right: 100%;
+    width: 50%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+/* LOSSE VERHALEN */
+
+label > input[type="text"] {
+  float: left !important;
+  margin-top: 1em;
+  height: 1em;
+}
+
+label > a {
+  float: left !important;
+  height: 0.8em;
+  padding-bottom: 1em;
+  margin-top: 0.7em;
+}
+
+article > h3:last-of-type {
+  margin-top: 1em;
+}
+
 /* IPAD  */
 
 @media screen and (max-width: 53em) {
 
-  section {
-    grid-template-columns: repeat(2, 1fr);
+  section, .top3 {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .nietIngelogd {
