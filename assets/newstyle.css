@@ -11,12 +11,15 @@ body {
 .backgr {
     background-image: url(images/girlov44.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    position: absolute;
 }
 
 main {
   padding: 1em 2em;
   text-align: left;
+  position: absolute;
+  margin-top: 3em;
 }
 
 @font-face {
@@ -61,8 +64,10 @@ header {
     background-color: #fff;
     text-align: center;
     width: 100%;
-    position: sticky;
+    position: fixed;
+    /* position: sticky; */
     border-bottom: solid 2px #C5C5CB;
+    z-index: 1;
 }
 
 .header {
@@ -116,6 +121,8 @@ li > a:hover > img {
   padding: 1em;
   margin-bottom: 8em;
   width: fit-content;
+  /* position: relative;
+  margin-top: 3em; */
 }
 
 .nietIngelogd > h3 {
@@ -132,6 +139,18 @@ li > a[href="login.html"], li > a[href="register.html"] {
   display: inline-block;
   border: none;
   border-bottom: solid 2px #003083;
+}
+
+.bubbleOn {
+  height: 0.5em;
+  width: 0.5em;
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgba(253, 100, 100, 0.7);
+}
+
+.bubbleOff {
+  display: none;
 }
 
 /* VERHALENPLANNER */
@@ -174,7 +193,7 @@ input[type="text"] {
   cursor: vertical-text;
 }
 
-input[type="text"]:last-of-type {
+fieldset > input[type="text"]:last-of-type {
   float: right;
 }
 
@@ -237,24 +256,53 @@ a[href="register.html"]:hover  {
 
 .seeMeNot {
   display: none;
+  animation-name: lightSpeedOut;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
+}
+
+@keyframes lightSpeedOut {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .seeMe{
   display: block;
+  margin: 1em 0 0.5em 0;
+  animation-name: lightSpeedIn;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
 }
 
-#options {
-  margin: 1em 0;
+@keyframes lightSpeedIn {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 /* ARTIKELEN  */
 
 section {
-    display: grid;
-    grid-column: span 2;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 0.8em;
-    grid-row-gap: 0.8em;
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0.8em;
+  grid-row-gap: 0.8em;
 }
 
 section > h2 {
@@ -262,10 +310,10 @@ section > h2 {
 }
 
 .verhalenweb {
-    display: block;
-    margin: 0;
-    background-image: url(images/perron4kopie.jpg);
-    margin-bottom: 1em;
+  display: block;
+  margin: 0;
+  background-image: url(images/perron4kopie.jpg);
+  margin-bottom: 1em;
 }
 
 .verhalenweb > h3 {
@@ -277,13 +325,9 @@ section > h2 {
 }
 
 article {
-    background-color: #fff;
-    padding: 1em;
-    border-bottom: solid 2px #C5C5CB;
-}
-
-article > a {
-  float: left;
+  background-color: #fff;
+  padding: 1em;
+  border-bottom: solid 2px #C5C5CB;
 }
 
 a[href="verward.html"]:first-child:hover, a[href="paranoia.html"]:first-child:hover, a[href="song.html"]:first-child:hover {
@@ -297,6 +341,10 @@ a[href="verward.html"]:first-child, a[href="paranoia.html"]:first-child, a[href=
 }
 
 /* RESULT */
+/* main > form {
+  position: relative;
+  margin-top: 3em;
+} */
 
 div {
   display: grid;
@@ -343,6 +391,21 @@ article > h4 {
   margin-top: 0.5em;
 }
 
+article > img {
+  height: 1.4em;
+  float: right;
+  margin-top: 0.8em;
+  cursor: copy;
+}
+
+.full {
+  display: none;
+}
+
+.empty {
+  display: inline-block;
+}
+
 /* LOSSE VERHALEN */
 
 label > input[type="text"] {
@@ -366,6 +429,14 @@ label > a:hover {
 article > h3:last-of-type {
   margin-top: 1em;
 }
+
+/* DETAILPAGINA */
+
+
+
+
+
+
 
 /* IPAD  */
 
