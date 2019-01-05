@@ -62,4 +62,8 @@ for (let i = 0; i < full.length; i++) {
 function emptyHeart(i) {
   empty[i].className = "empty"
   full[i].className = "full"
+
+  if(empty[i].className = "empty"){
+    bubble.className = "bubbleOff"
+  }
 }

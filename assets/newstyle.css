@@ -51,6 +51,7 @@ h3 {
 h4 > a, h3 > a {
   padding: 0;
   color: #003082;
+  margin-bottom: 1em;
 }
 
 p {
@@ -341,10 +342,6 @@ a[href="verward.html"]:first-child, a[href="paranoia.html"]:first-child, a[href=
 }
 
 /* RESULT */
-/* main > form {
-  position: relative;
-  margin-top: 3em;
-} */
 
 div {
   display: grid;
@@ -362,6 +359,7 @@ div {
   margin-bottom: 1em;
   display: inline-block;
   padding: 0 1em;
+  width: 90%;
 }
 
 #result > h2, #random > h2 {
@@ -383,6 +381,10 @@ div {
 
 .top3 > h2 {
   grid-column: span 3;
+}
+
+.top3 > .verhalenn {
+  display: none;
 }
 
 article > h4 {
@@ -431,9 +433,31 @@ article > h3:last-of-type {
 }
 
 /* DETAILPAGINA */
+article:last-of-type > a {
+  float: unset;
+}
 
+/* PROFIEL */
+.blok {
+  grid-column: span 1 !important;
+  display: block;
+}
 
+.blok > h2 {
+  margin-bottom: 0.5em;
+}
 
+.blok > article {
+  margin-bottom: 1em;
+  display: inline-block;
+  padding: 0 1em;
+  width: 90%;
+  grid-column: span 2;
+}
+
+/* .blok:first-of-type {
+  position: absolute;
+} */
 
 
 
@@ -488,7 +512,17 @@ article > h3:last-of-type {
     grid-column: span 2 !important;
   }
 
+  #random > article {
+    padding-bottom: 1.4em;
+  }
+
 }
+
+
+
+
+
+/* IPHONE */
 
 @media screen and (max-width: 39em) {
 
