@@ -331,11 +331,11 @@ article {
   border-bottom: solid 2px #C5C5CB;
 }
 
-a[href="verward.html"]:first-child:hover, a[href="paranoia.html"]:first-child:hover, a[href="song.html"]:first-child:hover {
+a[href="verward.html"]:hover, a[href="paranoia.html"]:hover, a[href="song.html"]:hover {
   transform: rotate(180deg) !important;
 }
 
-a[href="verward.html"]:first-child, a[href="paranoia.html"]:first-child, a[href="song.html"]:first-child {
+a[href="verward.html"], a[href="paranoia.html"], a[href="song.html"] {
   border: none;
   background: none;
   color: #003082;
@@ -437,6 +437,27 @@ article:last-of-type > a {
   float: unset;
 }
 
+main > div {
+  margin: 0;
+}
+
+div > a[href="verward.html"]:hover, div > a[href="paranoia.html"]:hover, div > a[href="song.html"]:hover {
+  transform: scale(1.1) !important;
+}
+
+div > a[href="verward.html"]:focus, div > a[href="paranoia.html"]:focus, div > a[href="song.html"]:focus {
+  transform: scale(1) !important;
+  color: tomato;
+}
+
+div > a[href="verward.html"], div > a[href="paranoia.html"], div > a[href="song.html"] {
+  margin: 0 0 0.7em 0em;
+}
+
+div > a:last-of-type {
+  text-align: right;
+}
+
 /* PROFIEL */
 .blok {
   grid-column: span 1 !important;
@@ -454,10 +475,6 @@ article:last-of-type > a {
   width: 90%;
   grid-column: span 2;
 }
-
-/* .blok:first-of-type {
-  position: absolute;
-} */
 
 
 

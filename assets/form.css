@@ -22,6 +22,11 @@ header > a:hover > img {
   transform: rotate(45deg) !important;
 }
 
+header > a:focus > img {
+  border: dotted 3px tomato;
+  transform: scale(1.2);
+}
+
 ul {
   position: center;
 }
@@ -33,11 +38,11 @@ li {
 }
 
 a {
-    color: #003083;
-    display: block;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    text-decoration: none;
+  color: #003083;
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-decoration: none;
 }
 
 a[href="register.html"] {
@@ -52,6 +57,10 @@ a[href="login.html"] {
 
 a[href="login.html"]:hover, a[href="register.html"]:hover {
   transform: scale(1.2);
+}
+
+a[href="login.html"]:focus, a[href="register.html"]:focus {
+  color: tomato;
 }
 
 button {
@@ -71,6 +80,12 @@ button {
 button[type="submit"]:hover {
   transition: box-shadow .45s ease-in-out;
   box-shadow: inset 0 -3.1em 0 rgba(0, 48, 131, 0.9);
+}
+
+button[type="submit"]:focus {
+  background-color: tomato;
+  border-bottom: none;
+  transform: scale(1.2);
 }
 
 section {
